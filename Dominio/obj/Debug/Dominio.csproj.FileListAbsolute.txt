@@ -4,3 +4,9 @@ C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Do
 C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Dominio\obj\Debug\Dominio.dll
 C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Dominio\bin\Debug\Dominio.dll
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Dominio\obj\Debug\Dominio.dll
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Dominio\obj\Debug\Dominio.pdb

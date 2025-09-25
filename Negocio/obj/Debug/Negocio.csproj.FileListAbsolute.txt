@@ -9,3 +9,14 @@ C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Ne
 C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.csproj.Up2Date
 C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.dll
 C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\bin\Debug\Negocio.dll
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\bin\Debug\AccesoDatos.dll
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\bin\Debug\Dominio.dll
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\bin\Debug\AccesoDatos.pdb
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.dll
+C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.pdb
