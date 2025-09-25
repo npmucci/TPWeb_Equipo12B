@@ -1,0 +1,29 @@
+﻿body {
+    background: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(90deg, #1a3c6e, #3b5a99, #5c7ecb)
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background: #3b5a99;
+    color: #fff;
+}

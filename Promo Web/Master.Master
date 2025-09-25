@@ -8,15 +8,25 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <link href="~/Assets/css/style.css" rel="stylesheet" type="text/css" runat="server" />
     <!-- bootstrap link -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
+            <nav class="navbar">
+              <div class="container">
+                <h1 class="navbar-brand"> Promo Ganá!</h1>
+              </div>
+            </nav>
+
+            <footer>
+              &copy; 2025 Todos los derechos reservados. Lucas Berlingeri - Mateo Maciel - Natalia Mucci
+            </footer>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-            <h1>hola</h1>
+            
         </div>
     </form>
       <!-- bootstrap link -->
