@@ -2,9 +2,9 @@
 using System.Configuration;
 using System.Data.SqlClient;
 
-namespace negocio
+namespace AccesoDatos
 {
-    public class AccesoDatos : IDisposable
+    public class Datos : IDisposable  // --> Interfaz IDisposable para usar with using() --> (obliga a implementar Dispose())
     {
         private SqlConnection conexion;
         private SqlCommand comando;
@@ -12,10 +12,10 @@ namespace negocio
 
         private string connectionString;
 
-        public AccesoDatos()
+        public Datos()
         {
             // Toma la cadena desde Web.config
-            connectionString = ConfigurationManager.ConnectionStrings["PromoDB"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["PROMOS_DB"].ConnectionString;
             
             conexion = new SqlConnection(connectionString);
         }

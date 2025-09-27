@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,7 +18,29 @@ namespace Promo_Web
         protected void btnSiguiente_Click(object sender, EventArgs e)
         {
 
-            Response.Redirect("PremioPage.aspx");
+            string codigoIngresado = txtCodigo.Text.Trim();
+            VoucherNegocio negocio = new VoucherNegocio();
+
+            EstadoVoucher estado = negocio.ValidarVoucher(codigoIngresado);
+
+            switch (estado)
+            {
+                case EstadoVoucher.Valido:
+                    // Guardamos el código en Session y redirigimos
+                    Session["VoucherCodigo"] = codigoIngresado;
+                    Response.Redirect("SeleccionPremio.aspx");
+                    break;
+
+                case EstadoVoucher.YaUsado:
+                    lblMensaje.Text = "El código ingresado ya fue utilizado.";
+                    lblMensaje.CssClass = "alert alert-warning";
+                    break;
+
+                case EstadoVoucher.Inexistente:
+                    lblMensaje.Text = "El código ingresado no existe.";
+                    lblMensaje.CssClass = "alert alert-danger";
+                    break;
+            }
         }
     }
 }
