@@ -23,8 +23,19 @@
                  <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control" aria-label="Código de voucher" aria-describedby="inputGroup-sizing-lg" />
             </div>
 
-            <!-- Botón -->
-            <asp:Button ID="btnSiguiente" runat="server" Text="Siguiente" CssClass="btn btn-primary btn-lg w-100" OnClick="btnSiguiente_Click" />
+            <!-- Botones -->
+           <div class="row">
+
+                <div class="col-6">
+                     <asp:Button ID="btnSiguiente" runat="server" Text="Siguiente" 
+                         CssClass="btn btn-primary btn-lg w-100" OnClick="btnSiguiente_Click" />
+                 </div>
+
+                 <div class="col-6">
+                     <asp:Button ID="btnVolver" runat="server" Text="Volver" 
+                           CssClass="btn btn-secondary btn-lg w-100" OnClick="btnVolver_Click" />
+                 </div>
+            </div>
 
             <!-- Mensaje -->
             <div class="form-floating mt-4">

@@ -38,18 +38,28 @@ namespace Promo_Web
                     // Guardamos el código en Session y redirigimos
                     Session["VoucherCodigo"] = codigoIngresado;
                     Response.Redirect("SeleccionPremio.aspx");
-                break;
+                    break;
 
                 case EstadoVoucher.YaUsado:
                     lblMensaje.Text = "El código ingresado ya fue utilizado.";
                     lblMensaje.CssClass = "alert alert-warning";
-                break;
+                    break;
 
                 case EstadoVoucher.Inexistente:
                     lblMensaje.Text = "El código ingresado no existe.";
                     lblMensaje.CssClass = "alert alert-danger";
-                break;
+                    break;
             }
         }
+
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+
+            Response.Redirect("Default.aspx");
+
+        }
+
+
     }
 }
