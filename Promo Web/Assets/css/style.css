@@ -25,7 +25,11 @@ main {
 .navbar-brand {
     color: #fff !important;
     font-weight: bold;
-}
+    font-size: 3rem !important;
+    text-align: center;
+} 
+   
+
 
 /* Footer */
 footer {
