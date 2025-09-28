@@ -187,3 +187,9 @@ C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\P
 C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Promo Web\obj\Debug\Promo Web.csproj.Up2Date
 C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Promo Web\obj\Debug\Promo Web.dll
 C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Promo Web\obj\Debug\Promo Web.pdb
+C:\Users\User\Desktop\TPWeb_Equipo12B\Promo Web\bin\AccesoDatos.dll
+C:\Users\User\Desktop\TPWeb_Equipo12B\Promo Web\bin\Dominio.dll
+C:\Users\User\Desktop\TPWeb_Equipo12B\Promo Web\bin\Negocio.dll
+C:\Users\User\Desktop\TPWeb_Equipo12B\Promo Web\bin\AccesoDatos.pdb
+C:\Users\User\Desktop\TPWeb_Equipo12B\Promo Web\bin\Dominio.pdb
+C:\Users\User\Desktop\TPWeb_Equipo12B\Promo Web\bin\Negocio.pdb

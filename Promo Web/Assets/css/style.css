@@ -1,13 +1,25 @@
-﻿body {
-    background: #f8f9fa;
-    font-family: Arial, sans-serif;
+﻿html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
+body {
+    background: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+/* Main*/
+main {
+    width: 100%;
+    margin-top: 100px; 
+    padding-bottom: 60px; 
+    min-height: calc(100vh - 100px); 
+}
+
 /* Navbar */
 .navbar {
-    background: linear-gradient(90deg, #1a3c6e, #3b5a99, #5c7ecb)
+    background: linear-gradient(90deg, #1a3c6e, #3b5a99, #5c7ecb);
 }
 
 .navbar-brand {
@@ -15,15 +27,23 @@
     font-weight: bold;
 }
 
-
 /* Footer */
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    background: #3b5a99;
+    background: linear-gradient(90deg, #1a3c6e, #3b5a99, #5c7ecb);
     color: #fff;
+    text-align: center;
+    line-height: 60px;
+    width: 100%;
+
+}
+
+/* Formulario */
+.form-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    padding: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 2rem;
 }
