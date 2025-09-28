@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 namespace AccesoDatos
 {
-    public class Datos : IDisposable  // --> Interfaz IDisposable para usar with using() --> (obliga a implementar Dispose())
+    public class Datos : IDisposable  // --> Interfaz IDisposable para usar using() --> (obliga a implementar Dispose())
     {
         private SqlConnection conexion;
         private SqlCommand comando;

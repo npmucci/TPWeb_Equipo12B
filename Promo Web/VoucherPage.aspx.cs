@@ -19,27 +19,36 @@ namespace Promo_Web
         {
 
             string codigoIngresado = txtCodigo.Text.Trim();
+
+            if (string.IsNullOrEmpty(codigoIngresado))
+            {
+                lblMensaje.Text = "Por favor, ingrese un código.";
+                lblMensaje.CssClass = "alert alert-warning";
+                return;
+            }
+
             VoucherNegocio negocio = new VoucherNegocio();
 
             EstadoVoucher estado = negocio.ValidarVoucher(codigoIngresado);
 
             switch (estado)
             {
+
                 case EstadoVoucher.Valido:
                     // Guardamos el código en Session y redirigimos
                     Session["VoucherCodigo"] = codigoIngresado;
                     Response.Redirect("SeleccionPremio.aspx");
-                    break;
+                break;
 
                 case EstadoVoucher.YaUsado:
                     lblMensaje.Text = "El código ingresado ya fue utilizado.";
                     lblMensaje.CssClass = "alert alert-warning";
-                    break;
+                break;
 
                 case EstadoVoucher.Inexistente:
                     lblMensaje.Text = "El código ingresado no existe.";
                     lblMensaje.CssClass = "alert alert-danger";
-                    break;
+                break;
             }
         }
     }
