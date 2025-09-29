@@ -24,6 +24,15 @@ namespace Promo_Web
         protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
+        /// Control hfSeleccionado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfSeleccionado;
+
+        /// <summary>
         /// Control repArticulos.
         /// </summary>
         /// <remarks>
@@ -31,5 +40,14 @@ namespace Promo_Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater repArticulos;
+
+        /// <summary>
+        /// Control btnContinuar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnContinuar;
     }
 }

@@ -10,7 +10,10 @@
 
         <asp:Label ID="lblError" runat="server" ForeColor="Red" />
 
-        <asp:Repeater ID="repArticulos" runat="server">
+        <!-- Hidden field para almacenar el artículo seleccionado -->
+        <asp:HiddenField ID="hfSeleccionado" runat="server" />
+
+        <asp:Repeater ID="repArticulos" runat="server" OnItemCommand="repArticulos_ItemCommand">
             <ItemTemplate>
                 <div class="card mb-3" style="max-width: 520px;">
                     <div class="row g-0">
@@ -40,13 +43,22 @@
                                 <p class="card-text"><%# Eval("Descripcion") %></p>
                                 <p>Marca: <%# Eval("Marca.Descripcion") %></p>
                                 <p>Categoría: <%# Eval("Categoria.Descripcion") %></p>
+
+                                <!-- Botón Seleccionar -->
+                                <asp:Button ID="btnSeleccionar" runat="server" Text="Seleccionar" 
+                                            CssClass="btn btn-primary" CommandName="Seleccionar" 
+                                            CommandArgument='<%# Eval("Id") %>' />
                             </div>
                         </div>
                     </div>
                 </div>
             </ItemTemplate>
         </asp:Repeater>
-    </div>
-    
 
+        <!-- Botón Continuar (oculto al inicio) -->
+        <asp:Button ID="btnContinuar" runat="server" Text="Continuar" CssClass="btn btn-success mt-3" 
+                    Visible="false" OnClick="btnContinuar_Click" />
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </asp:Content>
