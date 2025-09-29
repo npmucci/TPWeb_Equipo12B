@@ -13,5 +13,27 @@ namespace Promo_Web
         {
 
         }
+        protected void txtDNI_TextChanged(object sender, EventArgs e)
+        {
+
+            string dni = txtDNI.Text.Trim();
+            if (string.IsNullOrEmpty(dni))
+            {
+                lblDni.Text = "Por favor, ingrese su DNI.";
+                return;
+            }
+        }
+
+        protected void btnParticipar_Click(object sender, EventArgs e)
+        {
+
+            string dni = txtDNI.Text.Trim();
+            if (string.IsNullOrEmpty(dni))
+            {
+                lblDni.Text = "Por favor, ingrese su DNI.";
+                return;
+            }
+        }
+
     }
 }

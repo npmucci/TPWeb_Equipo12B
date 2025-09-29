@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="VoucherPage.aspx.cs" Inherits="Promo_Web.VoucherPage" %>
+﻿<%@ Page Title="Canje" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="VoucherPage.aspx.cs" Inherits="Promo_Web.VoucherPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 

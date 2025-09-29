@@ -12,9 +12,9 @@ body {
 /* Main*/
 main {
     width: 100%;
-    margin-top: 100px; 
+    margin-top: 20px; 
     padding-bottom: 60px; 
-    min-height: calc(100vh - 100px); 
+    min-height: calc(100vh - 20px); 
 }
 
 /* Navbar */
@@ -50,4 +50,5 @@ footer {
     padding: 2rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     margin-bottom: 2rem;
+    align-items: center;
 }
