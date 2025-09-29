@@ -2,7 +2,8 @@
 using System.Configuration;
 using System.Data.SqlClient;
 
-namespace negocio
+
+namespace AccesoDatosLayer
 {
     public class AccesoDatos : IDisposable
     {
