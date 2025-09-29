@@ -1,4 +1,4 @@
-﻿using AccesoDatosLayer;
+﻿using AccesoDatos;
 using Dominio;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 
 
-namespace AccesoDatosLayer
+namespace AccesoDatos
 {
     public class ArticuloDatos
     {
@@ -18,7 +18,7 @@ namespace AccesoDatosLayer
         {
             List<Articulo> lista = new List<Articulo>();
 
-            using (AccesoDatos datos = new AccesoDatos())
+            using (Datos datos = new Datos())
             {
                 //Agrupo por nombre asi no se repiten articulos
                 datos.SetearConsulta(@"
@@ -63,7 +63,7 @@ namespace AccesoDatosLayer
         {
             List<Imagen> listaImagenes = new List<Imagen>();
 
-            using (AccesoDatos datos = new AccesoDatos())
+            using (Datos datos = new Datos())
             {
                 datos.SetearConsulta(
                 "SELECT DISTINCT ImagenUrl FROM Imagenes WHERE IdArticulo = " + idArticulo

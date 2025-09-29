@@ -37,7 +37,7 @@ namespace Promo_Web
                 case EstadoVoucher.Valido:
                     // Guardamos el código en Session y redirigimos
                     Session["VoucherCodigo"] = codigoIngresado;
-                    Response.Redirect("SeleccionPremio.aspx");
+                    Response.Redirect("PremioPage.aspx");
                     break;
 
                 case EstadoVoucher.YaUsado:

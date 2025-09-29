@@ -2,12 +2,10 @@
 using System.Configuration;
 using System.Data.SqlClient;
 
-<<<<<<< HEAD:AccesoDatos/AccesoDatos.cs
 
-namespace AccesoDatosLayer
-=======
+
 namespace AccesoDatos
->>>>>>> a787c93c91bb6735a5e2a1619355bbd721190b84:AccesoDatos/Datos.cs
+
 {
     public class Datos : IDisposable  // --> Interfaz IDisposable para usar using() --> (obliga a implementar Dispose())
     {

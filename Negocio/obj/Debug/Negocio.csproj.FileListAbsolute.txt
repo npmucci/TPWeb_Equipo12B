@@ -1,26 +1,3 @@
-C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Negocio\bin\Debug\Negocio.dll
-C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Negocio\bin\Debug\Negocio.pdb
-C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Negocio\bin\Debug\AccesoDatos.dll
-C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Negocio\bin\Debug\Dominio.dll
-C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Negocio\bin\Debug\AccesoDatos.pdb
-C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Negocio\bin\Debug\Dominio.pdb
-C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
-C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
-C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.csproj.Up2Date
-C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.dll
-C:\Users\User\Documents\ARCHIVOS NATYYYYYYYY\Programacion III\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.pdb
-C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\bin\Debug\Negocio.dll
-C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\bin\Debug\Negocio.pdb
-C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\bin\Debug\AccesoDatos.dll
-C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\bin\Debug\Dominio.dll
-C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\bin\Debug\AccesoDatos.pdb
-C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\bin\Debug\Dominio.pdb
-C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
-C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
-C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.csproj.Up2Date
-C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.dll
-C:\Users\Luca\Desktop\Programación\Programacion 3\Actividad 4\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.pdb
-<<<<<<< HEAD
 C:\Users\Noxi-PC\Desktop\ProyectoWeb\TPWeb_Equipo12B\Negocio\bin\Debug\Negocio.dll
 C:\Users\Noxi-PC\Desktop\ProyectoWeb\TPWeb_Equipo12B\Negocio\bin\Debug\Negocio.pdb
 C:\Users\Noxi-PC\Desktop\ProyectoWeb\TPWeb_Equipo12B\Negocio\bin\Debug\AccesoDatos.dll
@@ -32,16 +9,3 @@ C:\Users\Noxi-PC\Desktop\ProyectoWeb\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.c
 C:\Users\Noxi-PC\Desktop\ProyectoWeb\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.csproj.Up2Date
 C:\Users\Noxi-PC\Desktop\ProyectoWeb\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.dll
 C:\Users\Noxi-PC\Desktop\ProyectoWeb\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.pdb
-=======
-C:\Users\User\Desktop\TPWeb_Equipo12B\Negocio\bin\Debug\Negocio.dll
-C:\Users\User\Desktop\TPWeb_Equipo12B\Negocio\bin\Debug\Negocio.pdb
-C:\Users\User\Desktop\TPWeb_Equipo12B\Negocio\bin\Debug\AccesoDatos.dll
-C:\Users\User\Desktop\TPWeb_Equipo12B\Negocio\bin\Debug\Dominio.dll
-C:\Users\User\Desktop\TPWeb_Equipo12B\Negocio\bin\Debug\AccesoDatos.pdb
-C:\Users\User\Desktop\TPWeb_Equipo12B\Negocio\bin\Debug\Dominio.pdb
-C:\Users\User\Desktop\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
-C:\Users\User\Desktop\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.csproj.Up2Date
-C:\Users\User\Desktop\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.dll
-C:\Users\User\Desktop\TPWeb_Equipo12B\Negocio\obj\Debug\Negocio.pdb
->>>>>>> a787c93c91bb6735a5e2a1619355bbd721190b84

@@ -46,9 +46,9 @@
     <Compile Include="VoucherNegocio.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AccesoDatos\AccesoDatosLayer.csproj">
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
       <Project>{08c23ef9-70bd-4b4b-b778-b4467d053b2c}</Project>
-      <Name>AccesoDatosLayer</Name>
+      <Name>AccesoDatos</Name>
     </ProjectReference>
     <ProjectReference Include="..\Dominio\Dominio.csproj">
       <Project>{b24d1cfe-117d-4475-8be5-6d6c653be19d}</Project>
