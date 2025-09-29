@@ -2,10 +2,14 @@
 using System.Configuration;
 using System.Data.SqlClient;
 
+<<<<<<< HEAD:AccesoDatos/AccesoDatos.cs
 
 namespace AccesoDatosLayer
+=======
+namespace AccesoDatos
+>>>>>>> a787c93c91bb6735a5e2a1619355bbd721190b84:AccesoDatos/Datos.cs
 {
-    public class AccesoDatos : IDisposable
+    public class Datos : IDisposable  // --> Interfaz IDisposable para usar using() --> (obliga a implementar Dispose())
     {
         private SqlConnection conexion;
         private SqlCommand comando;
@@ -13,10 +17,10 @@ namespace AccesoDatosLayer
 
         private string connectionString;
 
-        public AccesoDatos()
+        public Datos()
         {
             // Toma la cadena desde Web.config
-            connectionString = ConfigurationManager.ConnectionStrings["PromoDB"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["PROMOS_DB"].ConnectionString;
             
             conexion = new SqlConnection(connectionString);
         }

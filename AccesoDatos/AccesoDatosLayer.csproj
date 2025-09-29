@@ -42,8 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD:AccesoDatos/AccesoDatosLayer.csproj
     <Compile Include="AccesoDatos.cs" />
     <Compile Include="ArticuloDatos.cs" />
+=======
+    <Compile Include="Datos.cs" />
+>>>>>>> a787c93c91bb6735a5e2a1619355bbd721190b84:AccesoDatos/AccesoDatos.csproj
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
