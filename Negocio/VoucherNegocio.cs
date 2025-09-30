@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AccesoDatos;
+using Dominio;
 
 
 namespace Negocio
@@ -50,16 +51,29 @@ namespace Negocio
         }
 
 
-        public void MarcarComoUsado(string codigo)
+        public void ActualizarVoucher(Voucher voucher, int idCliente, int idArticulo)
         {
-            using (Datos datos = new Datos())
+            Datos datos = new Datos();
+
+            try
             {
-                datos.SetearConsulta("UPDATE Vouchers SET FechaCanje = @fecha WHERE Codigo = @codigo");
-                datos.SetearParametro("@fecha", DateTime.Now);
-                datos.SetearParametro("@codigo", codigo);
+                datos.SetearConsulta("UPDATE VOUCHERS SET IDCLIENTE = @IdCliente, IDARTICULO = @IdArticulo, FechaCanje = GETDATE() WHERE CodigoVoucher = @CodigoVoucher ");
+                datos.SetearParametro("@CodigoVoucher", voucher.Codigo);
+                datos.SetearParametro("@IdCliente", idCliente);
+                datos.SetearParametro("@IdArticulo", idArticulo);
+
                 datos.EjecutarAccion();
             }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al actualizar voucher: " + ex.Message, ex);
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
         }
+
 
 
 
