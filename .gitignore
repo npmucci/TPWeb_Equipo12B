@@ -1,4 +1,12 @@
-# Visual Studio
+# Build results
+[Bb]in/
+[Oo]bj/
+*.dll
+*.pdb
+*.cache
+*.log
+
+# Visual Studio files
 .vs/
 *.user
 *.suo
