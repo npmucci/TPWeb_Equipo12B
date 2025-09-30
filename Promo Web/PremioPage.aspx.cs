@@ -41,13 +41,13 @@ namespace Promo_Web
         {
             if (e.CommandName == "Seleccionar")
             {
-                // Guardar el ID seleccionado
+                
                 hfSeleccionado.Value = e.CommandArgument.ToString();
 
-                // Mostrar el botón Continuar
+                
                 btnContinuar.Visible = true;
 
-                // Cambiar el estilo de los botones para indicar seleccionado
+                
                 foreach (RepeaterItem item in repArticulos.Items)
                 {
                     Button btn = (Button)item.FindControl("btnSeleccionar");
@@ -59,20 +59,19 @@ namespace Promo_Web
             }
         }
 
-        // Redirigir al RegistroPage
+        
         protected void btnContinuar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(hfSeleccionado.Value))
             {
-                // Pasar el ID del artículo seleccionado por querystring (opcional)
+                
                 Response.Redirect("RegistroPage.aspx?idArticulo=" + hfSeleccionado.Value);
             }
         }
 
         private List<Articulo> ObtenerArticulos()
         {
-            // Tu método para traer los artículos de la base de datos
-            // Esto es un ejemplo con artículos de prueba
+            
             return new List<Articulo>
             {
                 new Articulo { Id = 1, Nombre = "Mochila", Descripcion="Mochila de prueba", Marca = new Marca{Descripcion="Wilson"}, Categoria=new Categoria{Descripcion="Mochilas"} },

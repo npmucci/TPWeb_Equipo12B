@@ -2,7 +2,14 @@
 <%@ Import Namespace="Dominio" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .card.selected {
+            border: 3px solid #0a53be; 
+            box-shadow: 0 0 12px rgba(0, 123, 255, 0.5);
+        }
+    </style>
 </asp:Content>
+
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container mt-4">
@@ -46,8 +53,8 @@
 
                                 <!-- Botón Seleccionar -->
                                 <asp:Button ID="btnSeleccionar" runat="server" Text="Seleccionar" 
-                                            CssClass="btn btn-primary" CommandName="Seleccionar" 
-                                            CommandArgument='<%# Eval("Id") %>' />
+                                    CssClass="btn btn-primary" CommandName="Seleccionar" 
+                                    CommandArgument='<%# Eval("Id") %>' />
                             </div>
                         </div>
                     </div>
