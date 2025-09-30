@@ -10,7 +10,9 @@
             <div class="col-md-4">
                 <label for="txtDNI" class="form-label">DNI</label>
                 <asp:TextBox ID="txtDNI" runat="server" CssClass="form-control" placeholder="Ingrese su DNI" AutoPostBack="true" OnTextChanged="txtDNI_TextChanged" /> 
-                <asp:Label ID="lblDni" runat="server" CssClass="text-danger mt-1"></asp:Label>
+            </div>
+            <div class="col-md-12">
+                  <asp:Label ID="lblDni" runat="server" CssClass="text-danger mt-1"></asp:Label>
             </div>
         </div>
 
@@ -51,6 +53,9 @@
             <label class="form-check-label" for="chkTerminos">
                 Acepto los <a href="#" data-bs-toggle="modal" data-bs-target="#terminosModal">Términos y Condiciones</a>
             </label>
+        </div>
+        <div>
+             <asp:Label ID="lblterminos" runat="server" CssClass="text-danger mt-1"></asp:Label>
         </div>
         <div class="row mb-4">
             <div class="col-12 text-center">

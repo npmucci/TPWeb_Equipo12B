@@ -27,8 +27,12 @@ main {
     font-weight: bold;
     font-size: 3rem !important;
     text-align: center;
-} 
-   
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
 
 
 /* Footer */
