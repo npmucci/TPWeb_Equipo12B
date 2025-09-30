@@ -26,7 +26,7 @@ namespace Promo_Web
         {
             try
             {
-                ArticuloDatos negocio = new ArticuloDatos();
+                ArticuloNegocio negocio = new ArticuloNegocio();
                 List<Articulo> listaFinal = negocio.ListarArticulos();
 
                 repArticulos.DataSource = listaFinal;
