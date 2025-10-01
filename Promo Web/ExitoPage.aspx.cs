@@ -13,5 +13,9 @@ namespace Promo_Web
         {
 
         }
+        protected void btnHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx",false);
+        }
     }
 }
