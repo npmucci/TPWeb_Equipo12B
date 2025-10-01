@@ -137,10 +137,14 @@ namespace Promo_Web
             try
             {
                 string asunto = "Registro exitoso en PromoGana";
-                string cuerpo = $"Hola {cliente.Nombre} {cliente.Apellido},\n\n" +
-                                $"Tu registro fue exitoso.\n" +
-                                $"Número de voucher utilizado: {codigoVoucher}\n\n" +
-                                "¡Gracias por participar!";
+
+               string cuerpo = "<h2>¡Hola " + cliente.Nombre + " " + cliente.Apellido + "!</h2>" +
+                "<p><b>Tu registro fue exitoso.</b></p>" +
+                "<p>Número de voucher utilizado: <b>" + codigoVoucher + "</b></p>" +
+                "<p>¡Gracias por participar en <b>PromoGana</b>!</p>" +
+                "<hr>" +
+                "<p><i>Este es un correo automático, por favor no respondas.</i></p>";
+
 
                 EmailService emailService = new EmailService();
                 emailService.ArmarEmail(cliente.Email, asunto, cuerpo);
@@ -148,9 +152,9 @@ namespace Promo_Web
             }
             catch (Exception ex)
             {
-                
                 throw new Exception("Error enviando email: " + ex.Message, ex);
             }
         }
+
     }
 }

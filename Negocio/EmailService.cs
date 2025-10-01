@@ -16,7 +16,7 @@ namespace Negocio
         public EmailService()
         {
             server = new SmtpClient();
-            server.Credentials = new NetworkCredential("12bequipo@gmail.com", "qwert.12b");
+            server.Credentials = new NetworkCredential("12bequipo@gmail.com", "ryybfamjuozoudhj");
             server.EnableSsl = true;
             server.Port = 587;
             server.Host = "smtp.gmail.com";
@@ -25,7 +25,7 @@ namespace Negocio
         public void ArmarEmail(string destinatario, string asunto, string cuerpo)
         {
             email = new MailMessage();
-            email.From = new MailAddress("noresponder@PromoGana.com");
+            email.From = new MailAddress("12bequipo@gmail.com");
             email.To.Add(destinatario);
             email.Subject = asunto;
             email.IsBodyHtml = true;

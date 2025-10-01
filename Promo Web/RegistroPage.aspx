@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2 class="text-center mb-4">Registro de Usuario</h2>
+   
     
     <div class="container form-container mt-5">
 
@@ -61,9 +62,8 @@
             <div class="col-12 text-center">
                 <asp:Button ID="btnParticipar" runat="server" Text="Participar" CssClass="btn btn-primary btn-md" OnClick="btnParticipar_Click" />
             </div>
-        </div>
-
-            <div class="modal fade" id="terminosModal" tabindex="-1" aria-labelledby="terminosModalLabel" aria-hidden="true">
+        </div>        
+              <div class="modal fade" id="terminosModal" tabindex="-1" aria-labelledby="terminosModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                   <div class="modal-header">

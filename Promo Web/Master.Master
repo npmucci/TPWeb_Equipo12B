@@ -31,6 +31,8 @@
         }
     </style>
     <form id="form1" runat="server">
+    <!-- ScriptManager para UpdatePanel -->
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
         <div>
             <nav class="navbar">
                  <div class="container-fluid justify-content-center">
