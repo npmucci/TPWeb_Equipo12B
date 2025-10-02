@@ -33,6 +33,26 @@ main {
     color: #dc3545 !important;
 }
 
+/*logo*/
+.imgLogo {
+    width:250px; 
+    margin:auto;
+    display:block;
+}
+
+.btn-home {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-home:hover {
+        background-color: #0056b3;
+    }
 
 
 /* Footer */

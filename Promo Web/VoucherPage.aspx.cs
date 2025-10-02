@@ -27,6 +27,13 @@ namespace Promo_Web
                 return;
             }
 
+            if (!codigoIngresado.All(char.IsLetterOrDigit))
+            {
+                lblMensaje.Text = "El código solo puede contener letras y números.";
+                lblMensaje.CssClass = "alert alert-warning";
+                return;
+            }
+
             VoucherNegocio negocio = new VoucherNegocio();
 
             EstadoVoucher estado = negocio.ValidarVoucher(codigoIngresado);

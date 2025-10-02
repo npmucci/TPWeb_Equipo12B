@@ -129,7 +129,32 @@ namespace Promo_Web
             Voucher voucher = new Voucher { Codigo = codigoVoucher };
             voucherNegocio.ActualizarVoucher(voucher, cliente.Id, idArticulo);
 
-            Response.Redirect("ExitoPage.aspx");
+            EnviarEmailParticipacion(cliente, codigoVoucher);
+            Response.Redirect("ExitoPage.aspx", false);
         }
+        private void EnviarEmailParticipacion(Cliente cliente, string codigoVoucher)
+        {
+            try
+            {
+                string asunto = "Registro exitoso en PromoGana";
+
+               string cuerpo = "<h2>¡Hola " + cliente.Nombre + " " + cliente.Apellido + "!</h2>" +
+                "<p><b>Tu registro fue exitoso.</b></p>" +
+                "<p>Número de voucher utilizado: <b>" + codigoVoucher + "</b></p>" +
+                "<p>¡Gracias por participar en <b>PromoGana</b>!</p>" +
+                "<hr>" +
+                "<p><i>Este es un correo automático, por favor no respondas.</i></p>";
+
+
+                EmailService emailService = new EmailService();
+                emailService.ArmarEmail(cliente.Email, asunto, cuerpo);
+                emailService.EnviarEmail();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error enviando email: " + ex.Message, ex);
+            }
+        }
+
     }
 }
