@@ -53,7 +53,7 @@ namespace Promo_Web
                     Button btn = (Button)item.FindControl("btnSeleccionar");
                     if (btn != null)
                     {
-                        btn.CssClass = btn.CommandArgument == hfSeleccionado.Value ? "btn btn-success" : "btn btn-primary";
+                        btn.CssClass = btn.CommandArgument == hfSeleccionado.Value ? "btn btn-primary" : "btn btn-primary";
                     }
                 }
             }
