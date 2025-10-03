@@ -13,7 +13,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container mt-4">
-        <asp:ScriptManager ID="ScriptManager1" runat="server" />
         <h1>Seleccioná tu premio</h1>
         <asp:Label ID="lblError" runat="server" ForeColor="Red" />
         <asp:UpdatePanel ID="upArticulos" runat="server">
