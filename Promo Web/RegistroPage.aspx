@@ -1,12 +1,14 @@
 ﻿<%@ Page Title="Registro de Usuario" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="RegistroPage.aspx.cs" Inherits="Promo_Web.RegistroPage" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2 class="text-center mb-4">Registro de Usuario</h2>
-   
-    
-    <div class="container form-container mt-5">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
 
-             
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <h2 class="text-center mb-4">Registro de Usuario</h2>
+ <asp:UpdatePanel ID="upFormulario" runat="server">
+    <ContentTemplate> 
+    <div class="container form-container mt-5">
+                     
         <div class="row mb-3">
             <div class="col-md-4">
                 <label for="txtDNI" class="form-label">DNI</label>
@@ -88,6 +90,9 @@
      
 
     </div>
+        
+    </ContentTemplate>
 
+</asp:UpdatePanel>
    
  </asp:Content>
