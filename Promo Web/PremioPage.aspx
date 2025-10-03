@@ -24,7 +24,7 @@
                     <asp:Repeater ID="repArticulos" runat="server" OnItemCommand="repArticulos_ItemCommand"> 
                         <ItemTemplate>
                             <div class="col">
-                             <div class="card h-auto border-primary d-flex flex-column" style="max-width: 250px;">
+                             <div class="card h-auto border-primary d-flex flex-column" style="max-width: 300px;">
                                 <!-- Carrusel -->
                                 <div id="carousel<%# Eval("Id") %>" class="carousel slide" data-bs-ride="false">
                                   <div class="carousel-inner" style="height:80px;">

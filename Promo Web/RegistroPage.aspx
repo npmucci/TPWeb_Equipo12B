@@ -93,6 +93,15 @@
         
     </ContentTemplate>
 
+  
+    <Triggers>
+
+        <asp:AsyncPostBackTrigger ControlID="txtDNI" EventName="TextChanged" />
+                
+    </Triggers> 
+
+      
+
 </asp:UpdatePanel>
    
  </asp:Content>
