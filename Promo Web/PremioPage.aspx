@@ -81,4 +81,15 @@
 
     </script>
 
+     <script type="text/javascript">
+      
+      Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function (sender, args) {
+         
+          var btn = document.getElementById('<%= btnContinuar.ClientID %>');
+          if (btn && btn.style.display !== "none") {
+              document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
+          }
+      });
+     </script>
+
 </asp:Content>

@@ -31,7 +31,7 @@
              </asp:ContentPlaceHolder>
             </main>
 
-            <footer class="footer">
+            <footer id="footer" class="footer">
               &copy; 2025 Todos los derechos reservados. Lucas Berlingeri - Mateo Maciel - Natalia Mucci
             </footer>
             

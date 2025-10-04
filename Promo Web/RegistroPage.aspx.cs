@@ -42,8 +42,16 @@ namespace Promo_Web
             {
                 lblDni.Text = "El DNI debe contener solo números y tener 7 u 8 dígitos.";
                 lblDni.CssClass = "text-danger";
+                txtNombre.Text = "";
+                txtApellido.Text = "";
+                txtMail.Text = "";
+                txtDomicilio.Text = "";
+                txtCiudad.Text = "";
+                txtCodigoPostal.Text = "";
                 return;
             }
+
+
 
             ClienteNegocio negocio = new ClienteNegocio();
             Cliente cliente = negocio.BuscarCliente(dni);
@@ -64,6 +72,7 @@ namespace Promo_Web
                 txtCiudad.Enabled = false;
                 txtCodigoPostal.Enabled = false;
                 Session["ClienteExistente"] = true;
+                lblDni.Text = "Cliente ya registrado";
             }
             else
             {
@@ -78,12 +87,21 @@ namespace Promo_Web
                 lblDni.Text = "Cliente no encontrado. Complete sus datos para registrarse.";
                 lblDni.CssClass = "text-danger";
                 Session["ClienteExistente"] = false;
+                txtNombre.Text = "";
+                txtApellido.Text = "";
+                txtMail.Text = "";
+                txtDomicilio.Text = "";
+                txtCiudad.Text = "";
+                txtCodigoPostal.Text = "";
             }
+
+
         }
 
         protected void btnParticipar_Click(object sender, EventArgs e)
 
         {
+
             lblterminos.Text = ""; // Limpiamos primero cualquier mensaje antiguo para que no quede el mensaje luego de tildar el ckeckbox
 
             if (!Page.IsValid)
@@ -103,6 +121,7 @@ namespace Promo_Web
                 return;
             }
 
+
             
 
             if (!chkTerminos.Checked)
@@ -112,7 +131,11 @@ namespace Promo_Web
                 return;
             }
 
-            
+            Page.Validate("Otros");
+            if (!Page.IsValid)
+                return;
+
+
             bool clienteExistente = Session["ClienteExistente"] != null && (bool)Session["ClienteExistente"];
             ClienteNegocio clienteNegocio = new ClienteNegocio();
             VoucherNegocio voucherNegocio = new VoucherNegocio();
