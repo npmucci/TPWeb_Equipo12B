@@ -51,13 +51,22 @@ namespace Promo_Web
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
 
         /// <summary>
-        /// Control lblNombre.
+        /// Control rfvNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombre;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNombre;
+
+        /// <summary>
+        /// Control revNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revNombre;
 
         /// <summary>
         /// Control txtApellido.
@@ -69,13 +78,22 @@ namespace Promo_Web
         protected global::System.Web.UI.WebControls.TextBox txtApellido;
 
         /// <summary>
-        /// Control lblApellido.
+        /// Control rfvApellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblApellido;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvApellido;
+
+        /// <summary>
+        /// Control revApellido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revApellido;
 
         /// <summary>
         /// Control txtMail.
@@ -87,13 +105,22 @@ namespace Promo_Web
         protected global::System.Web.UI.WebControls.TextBox txtMail;
 
         /// <summary>
-        /// Control lblMail.
+        /// Control rfvMail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMail;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMail;
+
+        /// <summary>
+        /// Control revMail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revMail;
 
         /// <summary>
         /// Control txtDomicilio.
@@ -105,13 +132,22 @@ namespace Promo_Web
         protected global::System.Web.UI.WebControls.TextBox txtDomicilio;
 
         /// <summary>
-        /// Control lblDomicilio.
+        /// Control rfvDomicilio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDomicilio;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDomicilio;
+
+        /// <summary>
+        /// Control revDomicilio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDomicilio;
 
         /// <summary>
         /// Control txtCiudad.
@@ -123,13 +159,22 @@ namespace Promo_Web
         protected global::System.Web.UI.WebControls.TextBox txtCiudad;
 
         /// <summary>
-        /// Control lblCiudad.
+        /// Control rfvCiudad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCiudad;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCiudad;
+
+        /// <summary>
+        /// Control revCiudad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCiudad;
 
         /// <summary>
         /// Control txtCodigoPostal.
@@ -141,13 +186,22 @@ namespace Promo_Web
         protected global::System.Web.UI.WebControls.TextBox txtCodigoPostal;
 
         /// <summary>
-        /// Control lblCodigoPostal.
+        /// Control rfvCP.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCodigoPostal;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCP;
+
+        /// <summary>
+        /// Control revCP.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCP;
 
         /// <summary>
         /// Control chkTerminos.

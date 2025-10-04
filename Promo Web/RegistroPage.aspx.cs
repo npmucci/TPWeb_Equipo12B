@@ -21,272 +21,6 @@ namespace Promo_Web
 
 
 
-        protected void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-            string nombre = txtNombre.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(nombre))
-            {
-                lblNombre.Text = "El nombre no puede estar vacío";
-            }
-            else if (nombre.Length > 50)
-            {
-                lblNombre.Text = "El nombre no puede tener más de 50 caracteres";
-            }
-            else if (!System.Text.RegularExpressions.Regex.IsMatch(nombre, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"))
-            {
-                lblNombre.Text = "El nombre solo puede contener letras";
-            }
-            else
-            {
-                lblNombre.Text = "";
-            }
-        }
-
-        protected void txtApellido_TextChanged(object sender, EventArgs e)
-        {
-            string apellido = txtApellido.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(apellido))
-            {
-                lblApellido.Text = "El apellido no puede estar vacío";
-            }
-            else if (apellido.Length > 50)
-            {
-                lblApellido.Text = "El apellido no puede tener más de 50 caracteres";
-            }
-            else if (!System.Text.RegularExpressions.Regex.IsMatch(apellido, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"))
-            {
-                lblApellido.Text = "El apellido solo puede contener letras y espacios";
-            }
-            else
-            {
-                lblApellido.Text = "";
-            }
-        }
-
-        protected void txtMail_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtMail.Text))
-            {
-                lblMail.Text = "Debe ingresar un email";
-            }
-            else if (txtMail.Text.Length > 50)
-            {
-                lblMail.Text = "El email no puede superar los 50 caracteres";
-            }
-            else if (!System.Text.RegularExpressions.Regex.IsMatch(
-                         txtMail.Text,
-                         @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
-            {
-                lblMail.Text = "Formato de email no válido";
-            }
-            else
-            {
-                lblMail.Text = "";
-            }
-        }
-
-        protected void txtDomicilio_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtDomicilio.Text))
-            {
-                lblDomicilio.Text = "El domicilio es obligatorio";
-            }
-            else if (txtDomicilio.Text.Length > 50)
-            {
-                lblDomicilio.Text = "El domicilio no puede superar los 50 caracteres";
-            }
-            else if (!System.Text.RegularExpressions.Regex.IsMatch(
-                         txtDomicilio.Text,
-                         @"^[a-zA-Z0-9\s]+$"))
-            {
-                lblDomicilio.Text = "El domicilio solo puede contener letras y números";
-            }
-            else
-            {
-                lblDomicilio.Text = "";
-            }
-        }
-
-        protected void txtCiudad_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtCiudad.Text))
-            {
-                lblCiudad.Text = "Debe ingresar una ciudad";
-            }
-            else if (txtCiudad.Text.Length > 50)
-            {
-                lblCiudad.Text = "La ciudad no puede superar los 50 caracteres";
-            }
-            else if (!System.Text.RegularExpressions.Regex.IsMatch(
-                         txtCiudad.Text,
-                         @"^[a-zA-Z\s]+$"))
-            {
-                lblCiudad.Text = "La ciudad solo puede contener letras";
-            }
-            else
-            {
-                lblCiudad.Text = "";
-            }
-        }
-
-        protected void txtCodigoPostal_TextChanged(object sender, EventArgs e)
-        {
-            string cp = txtCodigoPostal.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(cp))
-            {
-                lblCodigoPostal.Text = "Debe ingresar un código postal.";
-            }
-            else if (cp.Length > 8)
-            {
-                lblCodigoPostal.Text = "El código postal no puede superar los 8 caracteres.";
-            }
-            else if (!Regex.IsMatch(cp, @"^(\d{4}|[A-Z]\d{4}[A-Z]{3})$", RegexOptions.IgnoreCase))
-            {
-                lblCodigoPostal.Text = "Formato de código postal inválido. Ej: 1000 o C1425ABC.";
-            }
-            else
-            {
-                lblCodigoPostal.Text = "";
-            }
-        }
-        private bool validarCampos()
-        {
-            bool todoOk = true;
-
-            // Nombre
-            string nombre = txtNombre.Text.Trim();
-            if (string.IsNullOrWhiteSpace(nombre))
-            {
-                lblNombre.Text = "El nombre no puede estar vacío";
-                todoOk = false;
-            }
-            else if (nombre.Length > 50)
-            {
-                lblNombre.Text = "El nombre no puede tener más de 50 caracteres";
-                todoOk = false;
-            }
-            else if (!Regex.IsMatch(nombre, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"))
-            {
-                lblNombre.Text = "El nombre solo puede contener letras";
-                todoOk = false;
-            }
-            else
-            {
-                lblNombre.Text = "";
-            }
-
-            // Apellido
-            string apellido = txtApellido.Text.Trim();
-            if (string.IsNullOrWhiteSpace(apellido))
-            {
-                lblApellido.Text = "El apellido no puede estar vacío";
-                todoOk = false;
-            }
-            else if (apellido.Length > 50)
-            {
-                lblApellido.Text = "El apellido no puede tener más de 50 caracteres";
-                todoOk = false;
-            }
-            else if (!Regex.IsMatch(apellido, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"))
-            {
-                lblApellido.Text = "El apellido solo puede contener letras y espacios";
-                todoOk = false;
-            }
-            else
-            {
-                lblApellido.Text = "";
-            }
-
-            // Mail
-            if (string.IsNullOrWhiteSpace(txtMail.Text))
-            {
-                lblMail.Text = "Debe ingresar un email";
-                todoOk = false;
-            }
-            else if (txtMail.Text.Length > 50)
-            {
-                lblMail.Text = "El email no puede superar los 50 caracteres";
-                todoOk = false;
-            }
-            else if (!Regex.IsMatch(txtMail.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
-            {
-                lblMail.Text = "Formato de email no válido";
-                todoOk = false;
-            }
-            else
-            {
-                lblMail.Text = "";
-            }
-
-            // Domicilio
-            if (string.IsNullOrWhiteSpace(txtDomicilio.Text))
-            {
-                lblDomicilio.Text = "El domicilio es obligatorio";
-                todoOk = false;
-            }
-            else if (txtDomicilio.Text.Length > 50)
-            {
-                lblDomicilio.Text = "El domicilio no puede superar los 50 caracteres";
-                todoOk = false;
-            }
-            else if (!Regex.IsMatch(txtDomicilio.Text, @"^[a-zA-Z0-9\s]+$"))
-            {
-                lblDomicilio.Text = "El domicilio solo puede contener letras y números";
-                todoOk = false;
-            }
-            else
-            {
-                lblDomicilio.Text = "";
-            }
-
-            // Ciudad
-            if (string.IsNullOrWhiteSpace(txtCiudad.Text))
-            {
-                lblCiudad.Text = "Debe ingresar una ciudad";
-                todoOk = false;
-            }
-            else if (txtCiudad.Text.Length > 50)
-            {
-                lblCiudad.Text = "La ciudad no puede superar los 50 caracteres";
-                todoOk = false;
-            }
-            else if (!Regex.IsMatch(txtCiudad.Text, @"^[a-zA-Z\s]+$"))
-            {
-                lblCiudad.Text = "La ciudad solo puede contener letras";
-                todoOk = false;
-            }
-            else
-            {
-                lblCiudad.Text = "";
-            }
-
-            // Código Postal
-            string cp = txtCodigoPostal.Text.Trim();
-            if (string.IsNullOrWhiteSpace(cp))
-            {
-                lblCodigoPostal.Text = "Debe ingresar un código postal.";
-                todoOk = false;
-            }
-            else if (cp.Length > 8)
-            {
-                lblCodigoPostal.Text = "El código postal no puede superar los 8 caracteres.";
-                todoOk = false;
-            }
-            else if (!Regex.IsMatch(cp, @"^(\d{4}|[A-Z]\d{4}[A-Z]{3})$", RegexOptions.IgnoreCase))
-            {
-                lblCodigoPostal.Text = "Formato de código postal inválido. Ej: 1000 o C1425ABC.";
-                todoOk = false;
-            }
-            else
-            {
-                lblCodigoPostal.Text = "";
-            }
-
-            return todoOk;
-        }
         protected void txtDNI_TextChanged(object sender, EventArgs e)
         {
             string dni = txtDNI.Text.Trim();
@@ -350,7 +84,13 @@ namespace Promo_Web
         }
 
         protected void btnParticipar_Click(object sender, EventArgs e)
+
         {
+            lblterminos.Text = ""; // Limpiamos primero cualquier mensaje antiguo para que no quede el mensaje luego de tildar el ckeckbox
+
+            if (!Page.IsValid)
+                return; // valida todos los Validators declarativos primero
+
             string dni = txtDNI.Text.Trim();
             if (string.IsNullOrEmpty(dni))
             {
@@ -365,17 +105,12 @@ namespace Promo_Web
                 return;
             }
 
-            lblterminos.Text = ""; // Limpiamos primero cualquier mensaje antiguo para que no quede el mensaje luego de tildar el ckeckbox
+            
 
             if (!chkTerminos.Checked)
             {
                 lblterminos.Text = "Debe aceptar los Términos y Condiciones para participar.";
                 lblterminos.CssClass = "text-danger";
-                return;
-            }
-
-            if (!validarCampos())
-            {
                 return;
             }
 

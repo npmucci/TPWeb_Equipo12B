@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Registro de Usuario" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="RegistroPage.aspx.cs" Inherits="Promo_Web.RegistroPage" %>
+﻿<%@ Page Title="Registro de Usuario" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="RegistroPage.aspx.cs" Inherits="Promo_Web.RegistroPage" UnobtrusiveValidationMode="None" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -21,62 +21,104 @@
                     </div>
                 </div>
 
-                <!-- Nombre, Apellido, Email -->
+               <!-- Nombre -->
                 <div class="row mb-3">
-
                     <div class="col-md-4">
                         <label for="txtNombre" class="form-label">Nombre</label>
                         <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"
-                            placeholder="Nombre"
-                            AutoPostBack="true" OnTextChanged="txtNombre_TextChanged" />
-                        <asp:Label ID="lblNombre" runat="server" CssClass="text-danger mt-1"></asp:Label>
+                            placeholder="Nombre" />
+                        <asp:RequiredFieldValidator ID="rfvNombre" runat="server"
+                            ControlToValidate="txtNombre"
+                            ErrorMessage="El nombre no puede estar vacío"
+                            CssClass="text-danger" Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revNombre" runat="server"
+                            ControlToValidate="txtNombre"
+                            ValidationExpression="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}$"
+                            ErrorMessage="El nombre solo puede contener letras"
+                            CssClass="text-danger" Display="Dynamic" />
                     </div>
 
+                    <!-- Apellido -->
                     <div class="col-md-4">
                         <label for="txtApellido" class="form-label">Apellido</label>
                         <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control"
-                            placeholder="Apellido"
-                            AutoPostBack="true" OnTextChanged="txtApellido_TextChanged" />
-                        <asp:Label ID="lblApellido" runat="server" CssClass="text-danger mt-1"></asp:Label>
+                            placeholder="Apellido" />
+                        <asp:RequiredFieldValidator ID="rfvApellido" runat="server"
+                            ControlToValidate="txtApellido"
+                            ErrorMessage="El apellido no puede estar vacío"
+                            CssClass="text-danger" Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revApellido" runat="server"
+                            ControlToValidate="txtApellido"
+                            ValidationExpression="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}$"
+                            ErrorMessage="El apellido solo puede contener letras"
+                            CssClass="text-danger" Display="Dynamic" />
                     </div>
-
+                    
+                    <!-- Mail -->
                     <div class="col-md-4">
                         <label for="txtMail" class="form-label">Mail</label>
                         <asp:TextBox ID="txtMail" runat="server" CssClass="form-control"
-                            TextMode="Email" placeholder="Correo electrónico"
-                            AutoPostBack="true" OnTextChanged="txtMail_TextChanged" />
-                        <asp:Label ID="lblMail" runat="server" CssClass="text-danger mt-1"></asp:Label>
+                            TextMode="Email" placeholder="Correo electrónico" />
+                        <asp:RequiredFieldValidator ID="rfvMail" runat="server"
+                            ControlToValidate="txtMail"
+                            ErrorMessage="Debe ingresar un email"
+                            CssClass="text-danger" Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revMail" runat="server"
+                            ControlToValidate="txtMail"
+                            ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$"
+                            ErrorMessage="Formato de email no válido"
+                            CssClass="text-danger" Display="Dynamic" />
                     </div>
-
                 </div>
 
-                <!-- Domicilio, Ciudad, Código Postal -->
+                <!-- Domicilio -->
                 <div class="row mb-3">
-
                     <div class="col-md-4">
                         <label for="txtDomicilio" class="form-label">Domicilio</label>
                         <asp:TextBox ID="txtDomicilio" runat="server" CssClass="form-control"
-                            placeholder="Domicilio"
-                            AutoPostBack="true" OnTextChanged="txtDomicilio_TextChanged" />
-                        <asp:Label ID="lblDomicilio" runat="server" CssClass="text-danger mt-1"></asp:Label>
+                            placeholder="Domicilio" />
+                        <asp:RequiredFieldValidator ID="rfvDomicilio" runat="server"
+                            ControlToValidate="txtDomicilio"
+                            ErrorMessage="El domicilio es obligatorio"
+                            CssClass="text-danger" Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revDomicilio" runat="server"
+                            ControlToValidate="txtDomicilio"
+                            ValidationExpression="^[a-zA-Z0-9\s]{1,50}$"
+                            ErrorMessage="El domicilio solo puede contener letras y números"
+                            CssClass="text-danger" Display="Dynamic" />
                     </div>
-
+                    
+                    <!-- Ciudad -->
                     <div class="col-md-4">
                         <label for="txtCiudad" class="form-label">Ciudad</label>
                         <asp:TextBox ID="txtCiudad" runat="server" CssClass="form-control"
-                            placeholder="Ciudad"
-                            AutoPostBack="true" OnTextChanged="txtCiudad_TextChanged" />
-                        <asp:Label ID="lblCiudad" runat="server" CssClass="text-danger mt-1"></asp:Label>
+                            placeholder="Ciudad" />
+                        <asp:RequiredFieldValidator ID="rfvCiudad" runat="server"
+                            ControlToValidate="txtCiudad"
+                            ErrorMessage="Debe ingresar una ciudad"
+                            CssClass="text-danger" Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revCiudad" runat="server"
+                            ControlToValidate="txtCiudad"
+                            ValidationExpression="^[a-zA-Z\s]{1,50}$"
+                            ErrorMessage="La ciudad solo puede contener letras"
+                            CssClass="text-danger" Display="Dynamic" />
                     </div>
-
+                    
+                    <!-- Código Postal -->
                     <div class="col-md-4">
                         <label for="txtCodigoPostal" class="form-label">Código Postal</label>
                         <asp:TextBox ID="txtCodigoPostal" runat="server" CssClass="form-control"
-                            placeholder="Código Postal"
-                            AutoPostBack="true" OnTextChanged="txtCodigoPostal_TextChanged" />
-                        <asp:Label ID="lblCodigoPostal" runat="server" CssClass="text-danger mt-1"></asp:Label>
+                            placeholder="Código Postal" />
+                        <asp:RequiredFieldValidator ID="rfvCP" runat="server"
+                            ControlToValidate="txtCodigoPostal"
+                            ErrorMessage="Debe ingresar un código postal"
+                            CssClass="text-danger" Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revCP" runat="server"
+                            ControlToValidate="txtCodigoPostal"
+                            ValidationExpression="^(\d{4}|[A-Z]\d{4}[A-Z]{3})$"
+                            ErrorMessage="Formato de código postal inválido. Ej: 1000 o C1425ABC"
+                            CssClass="text-danger" Display="Dynamic" />
                     </div>
-
                 </div>
 
                 <!-- Términos y Condiciones -->
@@ -102,12 +144,6 @@
         
         <Triggers>
             <asp:AsyncPostBackTrigger ControlID="txtDNI" EventName="TextChanged" />
-            <asp:AsyncPostBackTrigger ControlID="txtNombre" EventName="TextChanged" />
-            <asp:AsyncPostBackTrigger ControlID="txtApellido" EventName="TextChanged" />
-            <asp:AsyncPostBackTrigger ControlID="txtMail" EventName="TextChanged" />
-            <asp:AsyncPostBackTrigger ControlID="txtDomicilio" EventName="TextChanged" />
-            <asp:AsyncPostBackTrigger ControlID="txtCiudad" EventName="TextChanged" />
-            <asp:AsyncPostBackTrigger ControlID="txtCodigoPostal" EventName="TextChanged" />
         </Triggers>
     </asp:UpdatePanel>
 
