@@ -26,7 +26,14 @@ namespace Promo_Web
             string dni = txtDNI.Text.Trim();
 
             if (string.IsNullOrEmpty(dni))
+
             {
+                txtNombre.Text = "";
+                txtApellido.Text = "";
+                txtMail.Text = "";
+                txtDomicilio.Text = "";
+                txtCiudad.Text = "";
+                txtCodigoPostal.Text = "";
                 lblDni.Text = "Por favor, ingrese su DNI.";
                 return;
             }
@@ -56,9 +63,6 @@ namespace Promo_Web
                 txtDomicilio.Enabled = false;
                 txtCiudad.Enabled = false;
                 txtCodigoPostal.Enabled = false;
-
-                lblDni.Text = "Cliente encontrado. Puedes continuar con la participación.";
-                lblDni.CssClass = "text-success";
                 Session["ClienteExistente"] = true;
             }
             else
@@ -69,16 +73,10 @@ namespace Promo_Web
                 txtDomicilio.Enabled = true;
                 txtCiudad.Enabled = true;
                 txtCodigoPostal.Enabled = true;
-
-                txtNombre.Text = "";
-                txtApellido.Text = "";
-                txtMail.Text = "";
-                txtDomicilio.Text = "";
-                txtCiudad.Text = "";
-                txtCodigoPostal.Text = "";
+                btnParticipar.Visible = true;
 
                 lblDni.Text = "Cliente no encontrado. Complete sus datos para registrarse.";
-                lblDni.CssClass = "text-warning";
+                lblDni.CssClass = "text-danger";
                 Session["ClienteExistente"] = false;
             }
         }

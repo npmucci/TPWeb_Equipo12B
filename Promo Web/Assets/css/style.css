@@ -76,3 +76,7 @@ footer {
     margin-bottom: 2rem;
     align-items: center;
 }
+
+.text-danger {
+    color: #dc3545 !important;
+}
