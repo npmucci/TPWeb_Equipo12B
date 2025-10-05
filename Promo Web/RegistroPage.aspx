@@ -15,11 +15,7 @@
                 <div class="col-md-4">
                     <label for="txtDNI" class="form-label">DNI</label>
                     <asp:TextBox ID="txtDNI" runat="server" CssClass="form-control" placeholder="Ingrese su DNI sin puntos" AutoPostBack="true" OnTextChanged="txtDNI_TextChanged" />
-                    <asp:RequiredFieldValidator ID="rfvDNI" runat="server"
-                        ControlToValidate="txtDNI"
-                        ErrorMessage="Debe ingresar su DNI"
-                        CssClass="text-danger"
-                        ValidationGroup="DNI" />
+                  
                 </div>
 
                 <div class="col-md-12">

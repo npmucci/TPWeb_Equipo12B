@@ -28,12 +28,8 @@ namespace Promo_Web
             if (string.IsNullOrEmpty(dni))
 
             {
-                txtNombre.Text = "";
-                txtApellido.Text = "";
-                txtMail.Text = "";
-                txtDomicilio.Text = "";
-                txtCiudad.Text = "";
-                txtCodigoPostal.Text = "";
+                LimpiarTxt();
+                CambiarEstado(false);
                 lblDni.Text = "Por favor, ingrese su DNI.";
                 return;
             }
@@ -42,12 +38,7 @@ namespace Promo_Web
             {
                 lblDni.Text = "El DNI debe contener solo números y tener 7 u 8 dígitos.";
                 lblDni.CssClass = "text-danger";
-                txtNombre.Text = "";
-                txtApellido.Text = "";
-                txtMail.Text = "";
-                txtDomicilio.Text = "";
-                txtCiudad.Text = "";
-                txtCodigoPostal.Text = "";
+                LimpiarTxt();
                 return;
             }
 
@@ -65,34 +56,19 @@ namespace Promo_Web
                 txtCiudad.Text = cliente.Ciudad;
                 txtCodigoPostal.Text = cliente.CP.ToString();
 
-                txtNombre.Enabled = false;
-                txtApellido.Enabled = false;
-                txtMail.Enabled = false;
-                txtDomicilio.Enabled = false;
-                txtCiudad.Enabled = false;
-                txtCodigoPostal.Enabled = false;
-                Session["ClienteExistente"] = true;
+                CambiarEstado(false);
                 lblDni.Text = "Cliente ya registrado";
+                lblDni.CssClass = "text-success";
+
             }
             else
             {
-                txtNombre.Enabled = true;
-                txtApellido.Enabled = true;
-                txtMail.Enabled = true;
-                txtDomicilio.Enabled = true;
-                txtCiudad.Enabled = true;
-                txtCodigoPostal.Enabled = true;
-                btnParticipar.Visible = true;
+                CambiarEstado(true);
+                LimpiarTxt();
 
                 lblDni.Text = "Cliente no encontrado. Complete sus datos para registrarse.";
                 lblDni.CssClass = "text-danger";
-                Session["ClienteExistente"] = false;
-                txtNombre.Text = "";
-                txtApellido.Text = "";
-                txtMail.Text = "";
-                txtDomicilio.Text = "";
-                txtCiudad.Text = "";
-                txtCodigoPostal.Text = "";
+
             }
 
 
@@ -102,7 +78,7 @@ namespace Promo_Web
 
         {
 
-            lblterminos.Text = ""; // Limpiamos primero cualquier mensaje antiguo para que no quede el mensaje luego de tildar el ckeckbox
+            lblterminos.Text = "";
 
             if (!Page.IsValid)
                 return; // valida todos los Validators declarativos primero
@@ -122,7 +98,7 @@ namespace Promo_Web
             }
 
 
-            
+
 
             if (!chkTerminos.Checked)
             {
@@ -136,12 +112,12 @@ namespace Promo_Web
                 return;
 
 
-            bool clienteExistente = Session["ClienteExistente"] != null && (bool)Session["ClienteExistente"];
+
             ClienteNegocio clienteNegocio = new ClienteNegocio();
             VoucherNegocio voucherNegocio = new VoucherNegocio();
             Cliente cliente = clienteNegocio.BuscarCliente(dni);
 
-            if (!clienteExistente)
+            if (cliente == null)
             {
                 Cliente nuevo = new Cliente
                 {
@@ -172,12 +148,12 @@ namespace Promo_Web
             {
                 string asunto = "Registro exitoso en PromoGana";
 
-               string cuerpo = "<h2>¡Hola " + cliente.Nombre + " " + cliente.Apellido + "!</h2>" +
-                "<p><b>Tu registro fue exitoso.</b></p>" +
-                "<p>Número de voucher utilizado: <b>" + codigoVoucher + "</b></p>" +
-                "<p>¡Gracias por participar en <b>PromoGana</b>!</p>" +
-                "<hr>" +
-                "<p><i>Este es un correo automático, por favor no respondas.</i></p>";
+                string cuerpo = "<h2>¡Hola " + cliente.Nombre + " " + cliente.Apellido + "!</h2>" +
+                 "<p><b>Tu registro fue exitoso.</b></p>" +
+                 "<p>Número de voucher utilizado: <b>" + codigoVoucher + "</b></p>" +
+                 "<p>¡Gracias por participar en <b>PromoGana</b>!</p>" +
+                 "<hr>" +
+                 "<p><i>Este es un correo automático, por favor no respondas.</i></p>";
 
 
                 EmailService emailService = new EmailService();
@@ -188,6 +164,28 @@ namespace Promo_Web
             {
                 throw new Exception("Error enviando email: " + ex.Message, ex);
             }
+        }
+
+        private void CambiarEstado(bool estado)
+        {
+            txtNombre.Enabled = estado;
+            txtApellido.Enabled = estado;
+            txtMail.Enabled = estado;
+            txtDomicilio.Enabled = estado;
+            txtCiudad.Enabled = estado;
+            txtCodigoPostal.Enabled = estado;
+
+
+        }
+
+        private void LimpiarTxt()
+        {
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtMail.Text = "";
+            txtDomicilio.Text = "";
+            txtCiudad.Text = "";
+            txtCodigoPostal.Text = "";
         }
 
     }

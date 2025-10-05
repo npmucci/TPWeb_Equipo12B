@@ -17,7 +17,14 @@ namespace Promo_Web
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
+
             {
+                // Validamos que tengamos voucher
+                if (Session["VoucherCodigo"] == null)
+                {
+                    Response.Redirect("Default.aspx"); // volvemos al inicio
+                }
+
                 CargarArticulos();
             }
         }
@@ -69,16 +76,6 @@ namespace Promo_Web
             }
         }
 
-        private List<Articulo> ObtenerArticulos()
-        {
-            
-            return new List<Articulo>
-            {
-                new Articulo { Id = 1, Nombre = "Mochila", Descripcion="Mochila de prueba", Marca = new Marca{Descripcion="Wilson"}, Categoria=new Categoria{Descripcion="Mochilas"} },
-                new Articulo { Id = 2, Nombre = "Mouse", Descripcion="Mouse de prueba", Marca = new Marca{Descripcion="Logitech"}, Categoria=new Categoria{Descripcion="Periféricos"} },
-                new Articulo { Id = 3, Nombre = "Teclado", Descripcion="Teclado de prueba", Marca = new Marca{Descripcion="Logitech"}, Categoria=new Categoria{Descripcion="Accesorios"} }
-            };
-        }
     }
 }
    
