@@ -1,21 +1,23 @@
-﻿html, body {
+﻿/* base */
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-body {
-    background: #f8f9fa;
     font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
 }
 
-/* Main*/
+/* Main */
 main {
     width: 100%;
-    margin-top: 20px; 
-    padding-bottom: 60px; 
-    min-height: calc(100vh - 20px); 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 /* Navbar */
 .navbar {
@@ -25,35 +27,14 @@ main {
 .navbar-brand {
     color: #fff !important;
     font-weight: bold;
-    font-size: 3rem !important;
+    font-size: 2.5rem;
     text-align: center;
 }
-
-.text-danger {
-    color: #dc3545 !important;
+/*logo*/ .imgLogo {
+    width: 250px;
+    margin: auto;
+    display: block;
 }
-
-/*logo*/
-.imgLogo {
-    width:250px; 
-    margin:auto;
-    display:block;
-}
-
-.btn-home {
-    margin-top: 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-    .btn-home:hover {
-        background-color: #0056b3;
-    }
-
 
 /* Footer */
 footer {
@@ -62,11 +43,12 @@ footer {
     text-align: center;
     line-height: 60px;
     width: 100%;
-
+    position: relative;
 }
 
-/* Formulario */
-.form-container {
+/* Cards / Formulario  */
+.form-container,
+.card {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 12px;
@@ -74,9 +56,124 @@ footer {
     padding: 2rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     margin-bottom: 2rem;
-    align-items: center;
+    width: 100%;
+    max-width: 600px;
 }
+.card-container {
+    width: 100%;
+    max-width: 700px;
+    padding: 3rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 40px;
+}
+
+.card-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.25);
+}
+
+
+/*  Inputs */
+.form-control {
+    border-radius: 8px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+.form-control::placeholder {
+        color: #999;
+ }
+
+/*  Botones */
+
+.btn, .btn-volver, .btn-seleccionado {
+    color: #fff !important;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    
+}
+
+.btn:hover, .btn-volver:hover, .btn-seleccionado:hover {
+  
+    transform: translateY(-2px) scale(1.02);
+    filter: brightness(1.05);
+ }
+.btn {
+    background-color: #5c7ecb !important;
+}
+.btn:hover {
+   background-color: #1a3c6e !important;
+    }
+/* Botón Volver  */
+.btn-volver {
+    background-color: #6c757d !important;
+}
+.btn-volver:hover {
+    background-color: #5a6268 !important;
+    }
+
+/*Boton Premio*/
+.btn-seleccionado {
+    background-color: #198754 !important
+}
+.btn-seleccionado:hover {
+     background-color: #28a745 !important;
+}
+
 
 .text-danger {
     color: #dc3545 !important;
 }
+
+.text-success {
+    color: #28a745 !important;
+}
+
+/* VoucherPage */
+.voucher-page {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 60vh; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.voucher-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    outline: none;
+}
+
+.voucher-message {
+    margin-top: 1rem;
+    color: #dc3545;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: grayscale(100%) brightness(0.5) ;
+    background-size: 20px 20px !important; 
+    height: 20px !important;
+}
+
+
+
+

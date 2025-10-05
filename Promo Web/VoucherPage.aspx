@@ -1,45 +1,39 @@
 ﻿<%@ Page Title="Canje" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="VoucherPage.aspx.cs" Inherits="Promo_Web.VoucherPage" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-         <div class="d-flex justify-content-center align-items-center" style="height:70vh;">
-
-        
-        <div class="card shadow-lg p-4 rounded" style="width: 600px; background-color: #ffffff;">
-            
+    <div class="d-flex justify-content-center align-items-center voucher-page">
+        <div class="card shadow-lg rounded card-container">
             <!-- Título -->
-
             <label for="txtCodigo" class="text-center mb-4 fs-2 fw-bold d-block">
                 Ingresá tu código de voucher:
             </label>
-            
 
-           <!-- Input Group -->
+            <!-- Input Group -->
             <div class="input-group input-group-lg mb-3">
-                 <span class="input-group-text" id="inputGroup-sizing-lg">🏷️ </span>
-                 <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control" aria-label="Código de voucher" aria-describedby="inputGroup-sizing-lg" />
+                <span class="input-group-text" id="inputGroup-sizing-lg">🏷️ </span>
+                <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control voucher-input" aria-label="Código de voucher" aria-describedby="inputGroup-sizing-lg" />
             </div>
 
             <!-- Botones -->
-           <div class="row">
+            <div class="row text-center mt-2">
 
                 <div class="col-6">
-                     <asp:Button ID="btnSiguiente" runat="server" Text="Siguiente" 
-                         CssClass="btn btn-primary btn-lg w-100" OnClick="btnSiguiente_Click" />
-                 </div>
+                    <asp:Button ID="btnSiguiente" runat="server" Text="Siguiente" CssClass="btn btn-lg" OnClick="btnSiguiente_Click" />
+                </div>
 
-                 <div class="col-6">
-                     <asp:Button ID="btnVolver" runat="server" Text="Volver" 
-                           CssClass="btn btn-secondary btn-lg w-100" OnClick="btnVolver_Click" />
-                 </div>
+                <div class="col-6">
+                    <asp:Button ID="btnVolver" runat="server" Text="Volver" CssClass="btn-volver btn-lg" OnClick="btnVolver_Click" />
+                </div>
             </div>
 
             <!-- Mensaje -->
             <div class="form-floating mt-4">
-            <asp:Label ID="lblMensaje" runat="server" CssClass="d-block mt-5"></asp:Label>
+                <asp:Label ID="lblMensaje" runat="server" CssClass=" voucher-message d-block mt-5"></asp:Label>
             </div>
 
         </div>

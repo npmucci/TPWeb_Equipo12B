@@ -48,25 +48,34 @@ namespace Promo_Web
         {
             if (e.CommandName == "Seleccionar")
             {
-                
                 hfSeleccionado.Value = e.CommandArgument.ToString();
-
-                
                 btnContinuar.Visible = true;
 
-                
                 foreach (RepeaterItem item in repArticulos.Items)
                 {
                     Button btn = (Button)item.FindControl("btnSeleccionar");
                     if (btn != null)
                     {
-                        btn.CssClass = btn.CommandArgument == hfSeleccionado.Value ? "btn btn-primary" : "btn btn-primary";
+                        if (btn.CommandArgument == hfSeleccionado.Value)
+                        {
+                            btn.CssClass = "btn-seleccionado mt-auto";
+                            btn.Text = "Seleccionado";
+                        }
+                        else
+                        {
+                            btn.CssClass = "btn mt-auto";
+                            btn.Text = "Seleccionar";
+                        }
                     }
                 }
             }
         }
 
-        
+
+
+
+
+
         protected void btnContinuar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(hfSeleccionado.Value))

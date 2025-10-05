@@ -4,8 +4,8 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="container d-flex align-items-start justify-content-center vh-100">
-          <div class="card shadow-lg p-4 text-center mt-5" style="max-width: 800px; border-radius: 15px;">
+    <div class="container d-flex align-items-center justify-content-center">
+          <div class="card shadow-lg p-4 text-center mt-5 card-container" style="max-width: 800px; border-radius: 15px;">
 
                 <!-- logo -->
                 <img src="https://i.ibb.co/27WpMBqC/Promo-Gana2.png" alt="Logo Empresa" class="imgLogo">
@@ -30,7 +30,7 @@
 
                 <!-- boton conenzar -->
                 
-                <asp:Button ID="btnComenzar" runat="server" Text="🎁 Comenzar" CssClass="btn btn-primary btn-lg w-100" OnClick="btnComenzar_Click" />
+                <asp:Button ID="btnComenzar" runat="server" Text="🎁 Comenzar" CssClass="btn btn-lg" OnClick="btnComenzar_Click" />
 
             </div>
         </div>

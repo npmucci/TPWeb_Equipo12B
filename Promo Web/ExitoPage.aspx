@@ -7,7 +7,7 @@
         <h2>¡GRACIAS POR PARTICIPAR EN NUESTRA PROMO!</h2>
            <p> Voucher canjeado con éxito</p>
    
-         <asp:Button ID="btnHome" runat="server" Text="Volver al inicio" CssClass="btn-home btn-md" OnClick="btnHome_Click" />
+         <asp:Button ID="btnHome" runat="server" Text="Volver al inicio" CssClass="btn btn-lg" OnClick="btnHome_Click" />
      </div>
 
 </asp:Content>

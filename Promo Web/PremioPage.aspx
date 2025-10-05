@@ -1,20 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true"
+﻿<%@ Page Title="Premios" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true"
     CodeBehind="PremioPage.aspx.cs" Inherits="Promo_Web.PremioPage"
     MaintainScrollPositionOnPostBack="true" %>
 <%@ Import Namespace="Dominio" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style>
-        .btn:hover { transform: scale(1.1); transition: transform 0.2s ease-in-out; }
-        .btn { transition: transform 0.2s ease-in-out; }
-
-    </style> 
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container mt-4">
-        <h1>Seleccioná tu premio</h1>
-        <asp:Label ID="lblError" runat="server" ForeColor="Red" />
+    <h1 class="mb-3">Seleccioná tu premio</h1>
+    <div class="container text-center mt-2">
+         <asp:Label ID="lblError" runat="server" ForeColor="Red" />
         <asp:UpdatePanel ID="upArticulos" runat="server">
             <ContentTemplate> 
                 <!-- Hidden field para almacenar el artículo seleccionado --> 
@@ -24,10 +18,10 @@
                     <asp:Repeater ID="repArticulos" runat="server" OnItemCommand="repArticulos_ItemCommand"> 
                         <ItemTemplate>
                             <div class="col">
-                             <div class="card h-auto border-primary d-flex flex-column" style="max-width: 300px;">
+                             <div class="card card-container h-auto border-primary d-flex flex-column" style="max-width: 300px;">
                                 <!-- Carrusel -->
                                 <div id="carousel<%# Eval("Id") %>" class="carousel slide" data-bs-ride="false">
-                                  <div class="carousel-inner" style="height:80px;">
+                                  <div class="carousel-inner";">
                                     <asp:Repeater ID="repImagenes" runat="server" DataSource='<%# ((Dominio.Articulo)Container.DataItem).Imagenes %>'>
                                       <ItemTemplate>
                                         <div class="carousel-item <%# Container.ItemIndex == 0 ? "active" : "" %>">
@@ -52,13 +46,12 @@
                                   <p class="card-text">Categoría: <%# Eval("Categoria.Descripcion") %></p>
 
                                   <!-- Botón siempre abajo -->
-                                  <asp:Button ID="btnSeleccionar" runat="server" Text="Seleccionar" CssClass="btn btn-primary mt-auto" 
+                                  <asp:Button ID="btnSeleccionar" runat="server" Text="Seleccionar" CssClass="btn mt-auto" 
                                       Style="width:100%; height:45px; white-space:nowrap;" CommandName="Seleccionar" CommandArgument='<%# Eval("Id") %>' />
                                 </div>
                               </div>
                             </div>
-
-                            
+                                                       
 
                         </ItemTemplate> 
 
@@ -67,7 +60,7 @@
                 </div> 
                 <!-- Botón Continuar --> 
                 <div class="d-flex justify-content-center mt-3">
-                    <asp:Button ID="btnContinuar" runat="server" Text="Continuar" CssClass="btn btn-primary" Visible="false" 
+                    <asp:Button ID="btnContinuar" runat="server" Text="Continuar" CssClass="btn" Visible="false" 
                         OnClick="btnContinuar_Click" Style="width:150px;" /> 
 
                 </div>

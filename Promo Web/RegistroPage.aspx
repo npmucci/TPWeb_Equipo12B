@@ -8,7 +8,7 @@
 
       <asp:UpdatePanel ID="upFormulario" runat="server">
     <ContentTemplate>
-        <div class="container form-container mt-5">
+        <div class="container form-container mt-3">
 
             <!-- DNI -->
             <div class="row mb-3">
@@ -81,10 +81,10 @@
             <asp:Label ID="lblterminos" runat="server" CssClass="text-danger mt-1"></asp:Label>
 
             <!-- Botón Participar -->
-            <div class="row mb-4">
+            <div class="row mt-3">
                 <div class="col-12 text-center">
                     <asp:Button ID="btnParticipar" runat="server" Text="Participar"
-                        CssClass="btn btn-primary btn-md" OnClick="btnParticipar_Click" ValidationGroup="DNI" />
+                        CssClass="btn btn-lg" OnClick="btnParticipar_Click" ValidationGroup="DNI" />
                 </div>
             </div>
 
